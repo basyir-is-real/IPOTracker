@@ -38,5 +38,11 @@ namespace IPOTracker
             allotMarginTextBox.Text = allotMarginValue.ToString("0.00");
             rocTextBox.Text = rocValue.ToString("0.00");
         }
+
+        private void btnOpenAddStockForm_Click(object sender, EventArgs e)
+        {
+            var addStockForm = new AddStockForm();
+            addStockForm.Show();
+        }
     }
 }

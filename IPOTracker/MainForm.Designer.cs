@@ -42,6 +42,7 @@
             this.allotMarginLabel = new System.Windows.Forms.Label();
             this.successRateLabel = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
+            this.btnOpenAddStockForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ipoTrackerLabel
@@ -166,12 +167,23 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
+            // btnOpenAddStockForm
+            // 
+            this.btnOpenAddStockForm.Location = new System.Drawing.Point(782, 440);
+            this.btnOpenAddStockForm.Name = "btnOpenAddStockForm";
+            this.btnOpenAddStockForm.Size = new System.Drawing.Size(122, 51);
+            this.btnOpenAddStockForm.TabIndex = 14;
+            this.btnOpenAddStockForm.Text = "Add Stock";
+            this.btnOpenAddStockForm.UseVisualStyleBackColor = true;
+            this.btnOpenAddStockForm.Click += new System.EventHandler(this.btnOpenAddStockForm_Click);
+            // 
             // TrackerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(985, 591);
+            this.Controls.Add(this.btnOpenAddStockForm);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.rocTextBox);
             this.Controls.Add(this.allotMarginTextBox);
@@ -212,6 +224,7 @@
         private System.Windows.Forms.Label allotMarginLabel;
         private System.Windows.Forms.Label successRateLabel;
         private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.Button btnOpenAddStockForm;
     }
 }
 
