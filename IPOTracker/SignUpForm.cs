@@ -43,6 +43,10 @@ namespace IPOTracker
                 MessageBox.Show("Account created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Optionally, close the sign-up form or navigate to the login form
                 this.Close();
+
+                // Open DashboardForm
+                DashboardForm dashboardForm = new DashboardForm();
+                dashboardForm.Show();
             }
             else
             {
