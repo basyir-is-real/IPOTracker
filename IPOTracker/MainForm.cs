@@ -62,5 +62,11 @@ namespace IPOTracker
                 }
             }
         }
+
+        private void CreateAcclinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpForm signUpForm = new SignUpForm();
+            signUpForm.ShowDialog();
+        }
     }
 }

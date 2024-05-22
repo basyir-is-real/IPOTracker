@@ -46,7 +46,7 @@
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(273, 123);
+            this.txtCompanyName.Location = new System.Drawing.Point(242, 102);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(132, 35);
             this.txtCompanyName.TabIndex = 5;
@@ -55,7 +55,7 @@
             // 
             this.CompanyNameLabel.AutoSize = true;
             this.CompanyNameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompanyNameLabel.Location = new System.Drawing.Point(60, 126);
+            this.CompanyNameLabel.Location = new System.Drawing.Point(29, 105);
             this.CompanyNameLabel.Margin = new System.Windows.Forms.Padding(3);
             this.CompanyNameLabel.Name = "CompanyNameLabel";
             this.CompanyNameLabel.Size = new System.Drawing.Size(168, 30);
@@ -66,17 +66,17 @@
             // 
             this.AddStockLabel.AutoSize = true;
             this.AddStockLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStockLabel.Location = new System.Drawing.Point(167, 43);
+            this.AddStockLabel.Location = new System.Drawing.Point(84, 34);
             this.AddStockLabel.Name = "AddStockLabel";
-            this.AddStockLabel.Size = new System.Drawing.Size(147, 37);
+            this.AddStockLabel.Size = new System.Drawing.Size(257, 37);
             this.AddStockLabel.TabIndex = 6;
-            this.AddStockLabel.Text = "Add Stock";
+            this.AddStockLabel.Text = "Enter Stock Details";
             // 
             // IndustryLabel
             // 
             this.IndustryLabel.AutoSize = true;
             this.IndustryLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IndustryLabel.Location = new System.Drawing.Point(60, 194);
+            this.IndustryLabel.Location = new System.Drawing.Point(29, 159);
             this.IndustryLabel.Margin = new System.Windows.Forms.Padding(3);
             this.IndustryLabel.Name = "IndustryLabel";
             this.IndustryLabel.Size = new System.Drawing.Size(93, 30);
@@ -85,7 +85,7 @@
             // 
             // txtIndustry
             // 
-            this.txtIndustry.Location = new System.Drawing.Point(273, 191);
+            this.txtIndustry.Location = new System.Drawing.Point(242, 156);
             this.txtIndustry.Name = "txtIndustry";
             this.txtIndustry.Size = new System.Drawing.Size(132, 35);
             this.txtIndustry.TabIndex = 8;
@@ -94,7 +94,7 @@
             // 
             this.TickerLabel.AutoSize = true;
             this.TickerLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TickerLabel.Location = new System.Drawing.Point(60, 260);
+            this.TickerLabel.Location = new System.Drawing.Point(29, 217);
             this.TickerLabel.Margin = new System.Windows.Forms.Padding(3);
             this.TickerLabel.Name = "TickerLabel";
             this.TickerLabel.Size = new System.Drawing.Size(72, 30);
@@ -103,7 +103,7 @@
             // 
             // txtTicker
             // 
-            this.txtTicker.Location = new System.Drawing.Point(273, 257);
+            this.txtTicker.Location = new System.Drawing.Point(242, 214);
             this.txtTicker.Name = "txtTicker";
             this.txtTicker.Size = new System.Drawing.Size(132, 35);
             this.txtTicker.TabIndex = 10;
@@ -112,7 +112,7 @@
             // 
             this.ListingPriceLabel.AutoSize = true;
             this.ListingPriceLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListingPriceLabel.Location = new System.Drawing.Point(60, 331);
+            this.ListingPriceLabel.Location = new System.Drawing.Point(29, 274);
             this.ListingPriceLabel.Margin = new System.Windows.Forms.Padding(3);
             this.ListingPriceLabel.Name = "ListingPriceLabel";
             this.ListingPriceLabel.Size = new System.Drawing.Size(129, 30);
@@ -121,7 +121,7 @@
             // 
             // txtListingPrice
             // 
-            this.txtListingPrice.Location = new System.Drawing.Point(273, 328);
+            this.txtListingPrice.Location = new System.Drawing.Point(242, 271);
             this.txtListingPrice.Name = "txtListingPrice";
             this.txtListingPrice.Size = new System.Drawing.Size(132, 35);
             this.txtListingPrice.TabIndex = 12;
@@ -130,7 +130,7 @@
             // 
             this.LastPriceLabel.AutoSize = true;
             this.LastPriceLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastPriceLabel.Location = new System.Drawing.Point(60, 395);
+            this.LastPriceLabel.Location = new System.Drawing.Point(29, 330);
             this.LastPriceLabel.Margin = new System.Windows.Forms.Padding(3);
             this.LastPriceLabel.Name = "LastPriceLabel";
             this.LastPriceLabel.Size = new System.Drawing.Size(106, 30);
@@ -139,7 +139,7 @@
             // 
             // txtLastPrice
             // 
-            this.txtLastPrice.Location = new System.Drawing.Point(273, 392);
+            this.txtLastPrice.Location = new System.Drawing.Point(242, 327);
             this.txtLastPrice.Name = "txtLastPrice";
             this.txtLastPrice.Size = new System.Drawing.Size(132, 35);
             this.txtLastPrice.TabIndex = 14;
@@ -151,7 +151,7 @@
             this.dtpListingDate.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpListingDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpListingDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpListingDate.Location = new System.Drawing.Point(273, 454);
+            this.dtpListingDate.Location = new System.Drawing.Point(242, 384);
             this.dtpListingDate.Name = "dtpListingDate";
             this.dtpListingDate.Size = new System.Drawing.Size(132, 33);
             this.dtpListingDate.TabIndex = 16;
@@ -160,7 +160,7 @@
             // 
             this.ListingDateLabel.AutoSize = true;
             this.ListingDateLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListingDateLabel.Location = new System.Drawing.Point(60, 456);
+            this.ListingDateLabel.Location = new System.Drawing.Point(29, 386);
             this.ListingDateLabel.Margin = new System.Windows.Forms.Padding(3);
             this.ListingDateLabel.Name = "ListingDateLabel";
             this.ListingDateLabel.Size = new System.Drawing.Size(128, 30);
@@ -169,7 +169,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(174, 530);
+            this.btnAdd.Location = new System.Drawing.Point(143, 446);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(122, 51);
             this.btnAdd.TabIndex = 18;
@@ -182,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(479, 610);
+            this.ClientSize = new System.Drawing.Size(416, 522);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.ListingDateLabel);
             this.Controls.Add(this.dtpListingDate);
@@ -201,7 +201,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "AddStockForm";
-            this.Text = "Add Stock";
+            this.Text = "IPO Tracker | Add Stock";
             this.ResumeLayout(false);
             this.PerformLayout();
 

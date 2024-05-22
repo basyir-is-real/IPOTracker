@@ -118,6 +118,7 @@
             this.CreateAcclinkLabel.TabStop = true;
             this.CreateAcclinkLabel.Text = "Create an account";
             this.CreateAcclinkLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CreateAcclinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateAcclinkLabel_LinkClicked);
             // 
             // MainForm
             // 
