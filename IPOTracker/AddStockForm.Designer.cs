@@ -66,11 +66,11 @@
             // 
             this.AddStockLabel.AutoSize = true;
             this.AddStockLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStockLabel.Location = new System.Drawing.Point(84, 34);
+            this.AddStockLabel.Location = new System.Drawing.Point(111, 34);
             this.AddStockLabel.Name = "AddStockLabel";
-            this.AddStockLabel.Size = new System.Drawing.Size(257, 37);
+            this.AddStockLabel.Size = new System.Drawing.Size(183, 37);
             this.AddStockLabel.TabIndex = 6;
-            this.AddStockLabel.Text = "Enter Stock Details";
+            this.AddStockLabel.Text = "Stock Details";
             // 
             // IndustryLabel
             // 

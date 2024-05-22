@@ -28,8 +28,13 @@ namespace IPOTracker
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Proceed to Dashboard
-                // For now, just close the form
-                this.Close();
+
+                // Open CalculatorForm
+                DashboardForm dashboardForm = new DashboardForm();
+                dashboardForm.Show();
+
+                // Hide the MainForm
+                this.Hide();
             }
             else
             {
@@ -66,6 +71,7 @@ namespace IPOTracker
         private void CreateAcclinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SignUpForm signUpForm = new SignUpForm();
+            this.Hide();
             signUpForm.ShowDialog();
         }
     }
