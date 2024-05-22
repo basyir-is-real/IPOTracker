@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,39 +12,55 @@ using System.Windows.Forms;
 
 namespace IPOTracker
 {
-    public partial class TrackerForm : Form
+    public partial class MainForm : Form
     {
-        public TrackerForm()
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        private void submitButton_Click(object sender, EventArgs e)
+        private void SignInButton_Click(object sender, EventArgs e)
         {
-            decimal appliedAmtValue, ballotAmtValue, exitAmtValue;
-            if (!decimal.TryParse(appliedAmtTextBox.Text, out appliedAmtValue) ||
-                !decimal.TryParse(ballotAmtTextBox.Text, out ballotAmtValue) ||
-                !decimal.TryParse(exitAmtTextBox.Text, out exitAmtValue))
+            string username = UsernameTxtBox.Text;
+            string password = PasswordTxtBox.Text;
+
+            if (ValidateUser(username, password))
             {
-                MessageBox.Show("Please enter valid values in all input fields.");
-                return;
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Proceed to Dashboard
+                // For now, just close the form
+                this.Close();
             }
-
-            // Perform logic
-            decimal successRateValue = ballotAmtValue / appliedAmtValue * 100;
-            decimal allotMarginValue = (exitAmtValue - ballotAmtValue) / ballotAmtValue * 100;
-            decimal rocValue = (exitAmtValue - ballotAmtValue) / appliedAmtValue * 100;
-
-            // Display outputs
-            successRateTextBox.Text = successRateValue.ToString("0.00");
-            allotMarginTextBox.Text = allotMarginValue.ToString("0.00");
-            rocTextBox.Text = rocValue.ToString("0.00");
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnOpenAddStockForm_Click(object sender, EventArgs e)
+        private bool ValidateUser(string username, string password)
         {
-            var addStockForm = new AddStockForm();
-            addStockForm.Show();
+            // Retrieve the connection string from App.config
+            string connectionString = ConfigurationManager.ConnectionStrings["MyLocalDbConnectionString"].ConnectionString;
+            string query = "SELECT COUNT(1) FROM Users WHERE Username = @Username AND Password = @Password";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Password", password);
+
+                try
+                {
+                    connection.Open();
+                    int result = (int)command.ExecuteScalar();
+                    return result == 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Database connection error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace IPOTracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TrackerForm());
+            Application.Run(new MainForm());
         }
     }
 }

@@ -56,6 +56,7 @@
             this.CompanyNameLabel.AutoSize = true;
             this.CompanyNameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CompanyNameLabel.Location = new System.Drawing.Point(60, 126);
+            this.CompanyNameLabel.Margin = new System.Windows.Forms.Padding(3);
             this.CompanyNameLabel.Name = "CompanyNameLabel";
             this.CompanyNameLabel.Size = new System.Drawing.Size(168, 30);
             this.CompanyNameLabel.TabIndex = 7;
@@ -76,6 +77,7 @@
             this.IndustryLabel.AutoSize = true;
             this.IndustryLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IndustryLabel.Location = new System.Drawing.Point(60, 194);
+            this.IndustryLabel.Margin = new System.Windows.Forms.Padding(3);
             this.IndustryLabel.Name = "IndustryLabel";
             this.IndustryLabel.Size = new System.Drawing.Size(93, 30);
             this.IndustryLabel.TabIndex = 9;
@@ -93,6 +95,7 @@
             this.TickerLabel.AutoSize = true;
             this.TickerLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TickerLabel.Location = new System.Drawing.Point(60, 260);
+            this.TickerLabel.Margin = new System.Windows.Forms.Padding(3);
             this.TickerLabel.Name = "TickerLabel";
             this.TickerLabel.Size = new System.Drawing.Size(72, 30);
             this.TickerLabel.TabIndex = 11;
@@ -110,6 +113,7 @@
             this.ListingPriceLabel.AutoSize = true;
             this.ListingPriceLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListingPriceLabel.Location = new System.Drawing.Point(60, 331);
+            this.ListingPriceLabel.Margin = new System.Windows.Forms.Padding(3);
             this.ListingPriceLabel.Name = "ListingPriceLabel";
             this.ListingPriceLabel.Size = new System.Drawing.Size(129, 30);
             this.ListingPriceLabel.TabIndex = 13;
@@ -127,6 +131,7 @@
             this.LastPriceLabel.AutoSize = true;
             this.LastPriceLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastPriceLabel.Location = new System.Drawing.Point(60, 395);
+            this.LastPriceLabel.Margin = new System.Windows.Forms.Padding(3);
             this.LastPriceLabel.Name = "LastPriceLabel";
             this.LastPriceLabel.Size = new System.Drawing.Size(106, 30);
             this.LastPriceLabel.TabIndex = 15;
@@ -156,6 +161,7 @@
             this.ListingDateLabel.AutoSize = true;
             this.ListingDateLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListingDateLabel.Location = new System.Drawing.Point(60, 456);
+            this.ListingDateLabel.Margin = new System.Windows.Forms.Padding(3);
             this.ListingDateLabel.Name = "ListingDateLabel";
             this.ListingDateLabel.Size = new System.Drawing.Size(128, 30);
             this.ListingDateLabel.TabIndex = 17;
