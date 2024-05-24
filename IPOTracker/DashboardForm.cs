@@ -12,15 +12,19 @@ namespace IPOTracker
 {
     public partial class DashboardForm : Form
     {
-        public DashboardForm()
+        private readonly string _currentUsername;
+        public DashboardForm(string currentUsername)
         {
             InitializeComponent();
+            _currentUsername = currentUsername;
         }
 
         private void SignOutLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Update the user status to signed out
-            UpdateUserStatusToSignedOut();
+            AuthenticationService authService = new AuthenticationService();
+            authService.SignOutUser(_currentUsername);
+            //// Update the user status to signed out
+            //UpdateUserStatusToSignedOut();
 
             // Close the dashboard form
             this.Close();

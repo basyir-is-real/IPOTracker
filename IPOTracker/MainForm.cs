@@ -31,7 +31,7 @@ namespace IPOTracker
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Open DashboardForm
-                DashboardForm dashboardForm = new DashboardForm();
+                DashboardForm dashboardForm = new DashboardForm(username);
                 dashboardForm.Show();
 
                 // Hide the LoginForm

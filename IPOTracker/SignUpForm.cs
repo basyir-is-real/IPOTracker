@@ -36,7 +36,7 @@ namespace IPOTracker
                     this.Close();
 
                     // Open DashboardForm
-                    DashboardForm dashboardForm = new DashboardForm();
+                    DashboardForm dashboardForm = new DashboardForm(username);
                     dashboardForm.Show();
                 }
             }

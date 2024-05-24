@@ -27,27 +27,31 @@ namespace IPOTracker
                 {
                     Username = username,
                     PasswordHash = hash,
-                    Salt = salt
+                    Salt = salt,
+                    IsSignedIn = false
                 };
 
                 context.Users.Add(user);
-                try
-                {
-                    context.SaveChanges();
-                    return true;
-                }
-                catch (DbUpdateException ex)
-                {
-                    // Log or display the inner exception for debugging
-                    MessageBox.Show($"An error occurred while updating the entries: {ex.InnerException?.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-                catch (Exception ex)
-                {
-                    // Log or display the general exception for debugging
-                    MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
+                context.SaveChanges();
+                return true;
+                //context.Users.Add(user);
+                //try
+                //{
+                //    context.SaveChanges();
+                //    return true;
+                //}
+                //catch (DbUpdateException ex)
+                //{
+                //    // Log or display the inner exception for debugging
+                //    MessageBox.Show($"An error occurred while updating the entries: {ex.InnerException?.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return false;
+                //}
+                //catch (Exception ex)
+                //{
+                //    // Log or display the general exception for debugging
+                //    MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return false;
+                //}
             }
         }
 
@@ -56,12 +60,31 @@ namespace IPOTracker
             using (var context = new FormDbContext())
             {
                 var user = context.Users.SingleOrDefault(u => u.Username == username);
-                if (user == null)
+                if (user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
                 {
-                    return false;
+                    user.IsSignedIn = true;
+                    context.SaveChanges();
+                    return true;
                 }
+                return false;
+                //if (user == null)
+                //{
+                //    return false;
+                //}
 
-                return BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
+                //return BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
+            }
+        }
+        public void SignOutUser(string username)
+        {
+            using (var context = new FormDbContext())
+            {
+                var user = context.Users.SingleOrDefault(u => u.Username == username);
+                if (user != null)
+                {
+                    user.IsSignedIn = false;
+                    context.SaveChanges();
+                }
             }
         }
     }
