@@ -114,6 +114,7 @@
             this.SignOutLinkLabel.TabStop = true;
             this.SignOutLinkLabel.Text = "Sign Out";
             this.SignOutLinkLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SignOutLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignOutLinkLabel_LinkClicked);
             // 
             // DashboardForm
             // 

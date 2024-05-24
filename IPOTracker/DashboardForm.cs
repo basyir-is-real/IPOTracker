@@ -16,5 +16,42 @@ namespace IPOTracker
         {
             InitializeComponent();
         }
+
+        private void SignOutLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Update the user status to signed out
+            UpdateUserStatusToSignedOut();
+
+            // Close the dashboard form
+            this.Close();
+
+            // Show the main form (login form)
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+        }
+
+        private void UpdateUserStatusToSignedOut()
+        {
+            // Implement the logic to update the user status to signed out in the database
+            // For example, you can update a "IsSignedIn" field in the Users table
+            string username = GetCurrentUsername(); // Implement this method to get the current user's username
+
+            using (var context = new FormDbContext())
+            {
+                var user = context.Users.SingleOrDefault(u => u.Username == username);
+                if (user != null)
+                {
+                    user.IsSignedIn = false; // Assuming you have an IsSignedIn field in your User class
+                    context.SaveChanges();
+                }
+            }
+        }
+
+        private string GetCurrentUsername()
+        {
+            // Implement this method to retrieve the current logged-in user's username
+            // For example, you might have stored the username in a static property or a session variable
+            return "currentUsername"; // Replace with actual implementation
+        }
     }
 }

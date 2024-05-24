@@ -85,7 +85,7 @@
             // 
             this.SignUpLabel.AutoSize = true;
             this.SignUpLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignUpLabel.Location = new System.Drawing.Point(109, 37);
+            this.SignUpLabel.Location = new System.Drawing.Point(99, 37);
             this.SignUpLabel.Name = "SignUpLabel";
             this.SignUpLabel.Size = new System.Drawing.Size(247, 37);
             this.SignUpLabel.TabIndex = 15;
