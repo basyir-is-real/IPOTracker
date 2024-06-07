@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnMyProfile = new System.Windows.Forms.Button();
@@ -40,9 +43,11 @@
             this.UserDescriptionLinkLabel = new System.Windows.Forms.LinkLabel();
             this.UsernameLabel = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.StockPriceChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StockPriceChart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -196,12 +201,29 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // StockPriceChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.StockPriceChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.StockPriceChart.Legends.Add(legend1);
+            this.StockPriceChart.Location = new System.Drawing.Point(192, 12);
+            this.StockPriceChart.Name = "StockPriceChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.StockPriceChart.Series.Add(series1);
+            this.StockPriceChart.Size = new System.Drawing.Size(720, 628);
+            this.StockPriceChart.TabIndex = 23;
+            this.StockPriceChart.Text = "Stock Performance Chart";
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.StockPriceChart);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
@@ -212,6 +234,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StockPriceChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +251,6 @@
         private System.Windows.Forms.Button btnCalendar;
         private System.Windows.Forms.Button btnAnalytics;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart StockPriceChart;
     }
 }
